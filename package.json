@@ -11,5 +11,13 @@
     "inquirer": "^6.5.2"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mguppy/read-me-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mguppy/read-me-generator/issues"
+  },
+  "homepage": "https://github.com/mguppy/read-me-generator#readme"
 }
