@@ -15,8 +15,8 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 // Take strings out of responses and then write to file
 function generateMarkdown(responses) {
-  return `# ${responses.title}
-  ## ${responses.name}
+  return `# ${responses.description}
+  ## ${responses.usage}
 
   ${renderLicenseBadge(responses.license)}
 `;
