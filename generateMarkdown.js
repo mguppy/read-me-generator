@@ -1,8 +1,13 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
+function renderLicenseBadge(license) {}
+//     if (responses.license = "MIT") {
+      // `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+//     }
+//     else {
 
-}
+//     }
+// }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -15,8 +20,24 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 // Take strings out of responses and then write to file
 function generateMarkdown(responses) {
-  return `# ${responses.description}
-  ## ${responses.usage}
+  return `
+  # Github
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ## Description
+  # <${responses.title}>
+  ## ${responses.description}
+  ## Table of Contents
+  * [Installation] (#installation)
+  * [Usage] (#usage)
+  ## Installation
+  ## Usage
+  # ${responses.usage}
+  ## License
+  This project is licensed under the MIT license.
+  ## Contributing
+  # ${responses.contributing}
+  ## Tests
+  To run tests, run the following command: 
 
   ${renderLicenseBadge(responses.license)}
 `;

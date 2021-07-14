@@ -13,6 +13,11 @@ inquirer
     .prompt([
         {
             type: 'input',
+            name: 'title',
+            message: 'What is your project title?',
+        },
+        {
+            type: 'input',
             name: 'description',
             message: 'What is the description of your project?',
         },
@@ -25,6 +30,12 @@ inquirer
             type: 'input',
             name: 'contributing',
             message: 'Who contributed to this project?',
+        },
+        {
+            type: 'list',
+            message: 'What license are you using?',
+            name: 'license',
+            choices: ['MIT', 'Mozilla', 'Perl'],
         },
     ])
     .then((responses) => {
