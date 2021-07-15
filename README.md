@@ -1,11 +1,10 @@
-
-  # <Read-Me>
+  # <Read-Me Generator>
 
   # Github
 
   ![License](https://img.shields.io/badge/license-MIT-blue.svg)
   ## Description
-  ## Read-Me Generator
+  Helps to generate a readme file
 
   ## Table of Contents
   * [Installation](#Installation)  
@@ -19,14 +18,14 @@
   > npm i
 
   ## Usage
-  Assists the user
+  Assists the user in creating a readme file
 
   ## Contributing
-  Maryam
+  Maryam Guppy
 
   ## Tests
   To run tests, run the following command: 
   > npm test
 
   ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at .  You can find more of my work at github.com/mguppy.
+  If you have any questions about the repo, open an issue or contact me directly at mguppy34@gmail.com.  You can find more of my work at github.com/mguppy.
