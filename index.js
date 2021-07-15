@@ -40,7 +40,7 @@ const questions = [
             type: 'list',
             message: 'What color do you want your license badge to be?',
             name: 'color',
-            choices: ['blueviolet', 'green', 'blue', 'yellow'],
+            choices: ['violet', 'green', 'blue', 'yellow'],
         },
         {
             type: 'input',
@@ -57,7 +57,7 @@ const questions = [
     inquirer
     .prompt(questions)
     .then((responses) => {
-        const filename = "README.md";
+        const filename = "./dist/README.md";
 
         //Passing the responses from the user into the README file using the generateMarkdown function
         fs.writeFile(filename, generateMarkdown({...responses}), (err) =>
