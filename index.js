@@ -9,8 +9,7 @@ const inquirer = require('inquirer');
 const generateMarkdown = require("./generateMarkdown");
 
 // TODO: Create an array of questions for user input
-inquirer
-    .prompt([
+const questions = [
         {
             type: 'input',
             name: 'title',
@@ -35,7 +34,13 @@ inquirer
             type: 'list',
             message: 'What license are you using?',
             name: 'license',
-            choices: ['MIT', 'Mozilla', 'Perl'],
+            choices: ['MIT', 'Mozilla', 'Perl', 'None'],
+        },
+        {
+            type: 'list',
+            message: 'What color do you want your license badge to be?',
+            name: 'color',
+            choices: ['blueviolet', 'green', 'blue', 'yellow'],
         },
         {
             type: 'input',
@@ -47,32 +52,18 @@ inquirer
             name: 'username',
             message: 'What is your GitHub username?',
         },
-    ])
+    ]
+
+    inquirer
+    .prompt(questions)
     .then((responses) => {
         const filename = "README.md";
 
+        //Passing the responses from the user into the README file using the generateMarkdown function
         fs.writeFile(filename, generateMarkdown({...responses}), (err) =>
             err ? console.log(err) : console.log('Success!')
         );
     });
-
-// const questions = [
-//     {
-//         type: 'input',
-//         name: 'description',
-//         message: 'What is the description of your project?'
-//     }
-// ];
-
-//When I want the above to work, you can call inquirer.prompt(questions).then
-
-// .then((responses) => {
-//     //Need to pass responses into generateMarkdown
-
-// }
-
-// );
-
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) { }
