@@ -37,6 +37,16 @@ inquirer
             name: 'license',
             choices: ['MIT', 'Mozilla', 'Perl'],
         },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'What is your GitHub username?',
+        },
     ])
     .then((responses) => {
         const filename = "README.md";

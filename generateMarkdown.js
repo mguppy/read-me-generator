@@ -2,10 +2,11 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 //     if (responses.license = "MIT") {
+      //output MIT license
       // `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
 //     }
 //     else {
-
+        //output blank string
 //     }
 // }
 
@@ -27,17 +28,25 @@ function generateMarkdown(responses) {
   # <${responses.title}>
   ## ${responses.description}
   ## Table of Contents
-  * [Installation] (#installation)
-  * [Usage] (#usage)
+  * [Installation](#Installation)  
+  * [Usage](#Usage)
+  * [License](#License)  
+  * [Contributing](#Contributing)  
+  * [Tests](#Tests)  
+  * [Questions](#Questions)
   ## Installation
+  > npm i
   ## Usage
-  # ${responses.usage}
+  ${responses.usage}
   ## License
   This project is licensed under the MIT license.
   ## Contributing
-  # ${responses.contributing}
+  ${responses.contributing}
   ## Tests
   To run tests, run the following command: 
+  > npm test
+  ## Questions
+  If you have any questions about the repo, open an issue or contact me directly at ${responses.email}.  You can find more of my work at github.com/${responses.username}.
 
   ${renderLicenseBadge(responses.license)}
 `;
